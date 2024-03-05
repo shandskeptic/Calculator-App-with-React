@@ -1,4 +1,4 @@
-import { Backspace, X, Equals, Minus, Divide, Plus } from '@phosphor-icons/react';
+import { Backspace, X, Equals, Minus, Divide, Plus, Percent } from '@phosphor-icons/react';
 import { useEffect, useState } from 'react';
 import { Result } from './Result';
 import { History } from './History';
@@ -61,7 +61,7 @@ export const Number = () => {
 							AC
 						</button>
 						<button onClick={() => handleOperator('%')} className="flex justify-center items-center bg-primary-200 hover:bg-secondary-200 p-4 rounded-full w-20 h-20">
-							%
+							<Percent size={32} />
 						</button>
 						<button onClick={() => handleOperator('/')} className="flex justify-center items-center bg-primary-200 hover:bg-secondary-200 p-4 rounded-full w-20 h-20">
 							<Divide size={32} />
