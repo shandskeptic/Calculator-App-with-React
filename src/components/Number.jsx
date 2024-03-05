@@ -6,7 +6,10 @@ import { History } from './History';
 export const Number = () => {
 	const [input, setInput] = useState('');
 	const [result, setResult] = useState('');
-	const [history, setHistory] = useState([]);
+	const [history, setHistory] = useState(() => {
+		const storedHistory = localStorage.getItem('history');
+		return storedHistory ? JSON.parse(storedHistory) : [];
+	});
 
 	const buttonStyles = {
 		basePrimary: 'flex justify-center bg-primary-400 items-center p-4 rounded-full w-20 h-20 ',
