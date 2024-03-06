@@ -35,13 +35,11 @@ export const History = ({ history, setHistory }) => {
 						.slice()
 						.reverse()
 						.map((h, index) => (
-							<>
-								<div key={index} className="flex flex-col border-primary-200 p-2 border-b-2 w-full text-2xl">
-									<span className="flex justify-end gap-4 my-4 text-2xl overflow-hidden">
-										<h2>{h}</h2>
-									</span>
-								</div>
-							</>
+							<div key={index} className="flex flex-col border-primary-200 p-2 border-b-2 w-full text-2xl">
+								<span className="flex justify-end gap-4 my-4 overflow-hidden">
+									<h2>{h}</h2>
+								</span>
+							</div>
 						))}
 			</div>
 		</div>
